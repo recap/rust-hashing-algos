@@ -11,6 +11,9 @@ impl Sha256 {
     // Constructor to initialize the SHA-256 state
     pub fn new() -> Sha256 {
         Sha256 {
+            // Initializing the hash values H0, H1, H2, H3, H4, H5, H6, H7.
+            // These are the first 32 bits of the decimal part of the square roots of first 8 primes 2,...
+            // converted to binary and then convert every 4 bits to hex.
             state: [
                 0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab,
                 0x5be0cd19,
