@@ -37,10 +37,17 @@ impl Sha256 {
                 | (block[4 * i + 3] as u32);
         }
 
+        fn sigma_0(x: u32) -> u32 {
+            x.rotate_right(7) ^ x.rotate_right(18) ^ (x >> 3)
+        }
+
+        fn sigma_1(x: u32) -> u32 {
+            x.rotate_right(17) ^ x.rotate_right(19) ^ (x >> 10)
+        }
         // Extend the first 16 words into the remaining 48 words
         for i in 16..64 {
-            let s0 = w[i - 15].rotate_right(7) ^ w[i - 15].rotate_right(18) ^ (w[i - 15] >> 3);
-            let s1 = w[i - 2].rotate_right(17) ^ w[i - 2].rotate_right(19) ^ (w[i - 2] >> 10);
+            let s0 = sigma_0(w[i - 15]);
+            let s1 = sigma_1(w[i - 2]);
             w[i] = w[i - 16]
                 .wrapping_add(s0)
                 .wrapping_add(w[i - 7])
