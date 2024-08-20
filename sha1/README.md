@@ -66,6 +66,10 @@ fn main() {
 }
 ```
 
+## Exteranl links
+
+- Detailed explanation: [https://brilliant.org/wiki/secure-hashing-algorithms/](https://brilliant.org/wiki/secure-hashing-algorithms/)
+
 ## Important Notes
 
 **Educational Use Only**: This implementation is designed for learning purposes and is **not** optimized for performance or security. For real-world applications, consider using well-tested cryptographic libraries.
