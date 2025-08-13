@@ -2,7 +2,8 @@
 
 An educational playground for implementing various hasing algorithms from scratch in Rust.
 
-> [!WARNING] > **Educational Use Only**: These implementations are designed for learning purposes only and are **not** optimized for performance or security. For real-world applications, consider using well-tested cryptographic libraries.
+> [!WARNING]
+> **Educational Use Only**: These implementations are designed for learning purposes only and are **not** optimized for performance or security. For real-world applications, consider using well-tested cryptographic libraries.
 
 ## License
 
